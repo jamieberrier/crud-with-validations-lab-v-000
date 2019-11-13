@@ -13,7 +13,7 @@ class Song < ApplicationRecord
 
   def same_artist?
     binding.pry
-    Song.all.any?(artist_name: :self.artist_name)
+    Song.all.any?(artist_name: self.artist_name)
   end
 
   def released?
