@@ -12,13 +12,13 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
 
-    respond_to do |format|
+    #respond_to do |format|
       if @song.save
-        format.html { redirect_to song_path(@song), notice: 'Song was successfully created.' }
+        redirect_to song_path(@song), notice: 'Song was successfully created.'
       else
-        format.html { render :new }
+        render :new
       end
-    end
+    #end
   end
 
   def show
