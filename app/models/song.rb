@@ -14,6 +14,8 @@ class Song < ApplicationRecord
   def same_artist_and_year?
     binding.pry
     # see if song title exists by same artist, if so check if year matches
+    Song.all.each do |song|
+    end
   end
 
   def released?
