@@ -6,4 +6,5 @@
 <p>Released? <%= @song.released %>, in <%= @song.year %></p>
 
 <%= link_to 'Edit', edit_song_path(@song) %><br><br>
-<%= button_to 'Destroy', @song, method: :delete %>
+<%= button_to 'Destroy', @song, method: :delete %><br><br>
+<%= link_to 'All Songs', songs_path %>
