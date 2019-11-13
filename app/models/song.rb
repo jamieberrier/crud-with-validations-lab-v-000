@@ -19,6 +19,8 @@ class Song < ApplicationRecord
         if song.artist_name == self.artist_name
           song.year == self.year
         end
+      else
+        false
       end
     end
   end
