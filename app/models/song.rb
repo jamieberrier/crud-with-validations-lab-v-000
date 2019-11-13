@@ -7,4 +7,8 @@ class Song < ApplicationRecord
   # Must be less than or equal to the current year
   validates :year, numericality: { only_integer: true, less_than_or_equal_to: Time.now.year }, presence: true unless :released
   validates :artist_name, presence: true
+
+  def released?
+    released == true
+  end
 end
