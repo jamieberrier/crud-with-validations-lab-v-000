@@ -13,7 +13,8 @@ class Song < ApplicationRecord
 
   def same_artist?
     binding.pry
-    Song.all.any?
+    # Cannot be repeated by the same artist in the same year
+    # see if song title exists by same artist, if so check if year matches
   end
 
   def released?
