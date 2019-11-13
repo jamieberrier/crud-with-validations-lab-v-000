@@ -11,6 +11,10 @@ class Song < ApplicationRecord
     # [x] Must not be blank
   validates :artist_name, presence: true
 
+  def dame_artist?
+
+    end
+
   def released?
     released == true
   end
