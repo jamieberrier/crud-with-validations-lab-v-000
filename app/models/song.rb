@@ -11,7 +11,7 @@ class Song < ApplicationRecord
     # [x] Must not be blank
   validates :artist_name, presence: true
 
-  def dame_artist?
+  def same_artist?
 
   end
 
