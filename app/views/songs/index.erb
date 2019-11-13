@@ -22,8 +22,8 @@
         <td><%= song.genre %></td>
         <td><%= song.released %></td>
         <td><%= song.year %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
+        <td><%= button_to 'Show', song %></td>
+        <td><%= button_to 'Edit', edit_song_path(song) %></td>
         <td><%= button_to 'Destroy', song, method: :delete %></td>
       </tr>
     <% end %>
