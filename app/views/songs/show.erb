@@ -5,3 +5,4 @@
 <p><%= @song.year %></p>
 
 <%= link_to 'Edit', edit_song_path(@song) %>
+<td><%= button_to 'Destroy', song, method: :delete %></td>
