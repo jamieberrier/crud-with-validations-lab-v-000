@@ -13,7 +13,7 @@ class Song < ApplicationRecord
 
   def dame_artist?
 
-    end
+  end
 
   def released?
     released == true
