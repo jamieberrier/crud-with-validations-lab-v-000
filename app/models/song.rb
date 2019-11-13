@@ -12,7 +12,7 @@ class Song < ApplicationRecord
   validates :artist_name, presence: true
 
   def same_artist?
-
+    binding.pry
   end
 
   def released?
