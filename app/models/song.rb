@@ -13,6 +13,7 @@ class Song < ApplicationRecord
 
   def same_artist?
     binding.pry
+    artist_name == self.artist_name
   end
 
   def released?
