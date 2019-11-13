@@ -3,5 +3,5 @@
 <p>Genre: <%= @song.genre %></p>
 <p>Released? <%= @song.released %>, in <%= @song.year %></p>
 
-<%= link_to 'Edit', edit_song_path(@song) %>
+<%= link_to 'Edit', edit_song_path(@song) %><br>
 <%= button_to 'Destroy', @song, method: :delete %>
