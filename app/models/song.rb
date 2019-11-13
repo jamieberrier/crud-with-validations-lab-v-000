@@ -12,7 +12,7 @@ class Song < ApplicationRecord
   validates :artist_name, presence: true
 
   def same_artist_and_year?
-    # see if song title exists by same artist, if so check if year matches
+    # does song title exist by same artist, if so check if year matches
     Song.all.each do |song|
       if song.title == self.title
         if song.artist_name == self.artist_name
