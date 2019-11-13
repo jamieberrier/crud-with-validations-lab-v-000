@@ -16,6 +16,8 @@ class Song < ApplicationRecord
     # see if song title exists by same artist, if so check if year matches
     Song.all.each do |song|
       if song.title == self.title
+        if song.artist_name == self.artist_name
+        end
       end
     end
   end
