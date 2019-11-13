@@ -1,7 +1,7 @@
 class Song < ApplicationRecord
   # [x] Must not be blank
   # [ ] Cannot be repeated by the same artist in the same year
-  validates :title, presence: true, uniqueness: { scope: :year, if: :same_artist?, message: "can only happen once per year" }
+  validates :title, presence: true, uniqueness: { scope: :year, if: :same_artist_and_year?, message: "can only happen once per year" }
   # [x] Must be true or false
   validates :released, inclusion: { in: [true, false] }
   # [x] Optional if released is false
@@ -11,9 +11,8 @@ class Song < ApplicationRecord
     # [x] Must not be blank
   validates :artist_name, presence: true
 
-  def same_artist?
+  def same_artist_and_year?
     binding.pry
-    # Cannot be repeated by the same artist in the same year
     # see if song title exists by same artist, if so check if year matches
   end
 
