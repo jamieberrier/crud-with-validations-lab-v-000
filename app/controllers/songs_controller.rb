@@ -38,7 +38,6 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     @song.destroy
     respond_to do |format|
       format.html { redirect_to songs_path, notice: 'Song was successfully destroyed.' }
