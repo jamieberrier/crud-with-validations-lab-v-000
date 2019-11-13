@@ -5,6 +5,6 @@ class Song < ApplicationRecord
   # Optional if released is false
   # Must not be blank if released is true
   # Must be less than or equal to the current year
-  validates :year, numericality: { only_integer: true, less_than_or_equal_to: Time.now.year } unless released == false
+  validates :year, presence: true unless :released == false, numericality: { only_integer: true, less_than_or_equal_to: Time.now.year } 
   validates :artist_name, presence: true
 end
