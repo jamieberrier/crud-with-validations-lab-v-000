@@ -40,7 +40,7 @@ class SongsController < ApplicationController
   def destroy
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
+      format.html { redirect_to songs_path, notice: 'Song was successfully destroyed.' }
     end
   end
 
