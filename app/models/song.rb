@@ -1,5 +1,5 @@
 class Song < ApplicationRecord
-  # Cannot be repeated by the same artist in the same year
+  # [ ] Cannot be repeated by the same artist in the same year
   validates :title, presence: true, uniqueness: { scope: :year, message: "can only happen once per year" }
   validates :released, inclusion: { in: [true, false] }
   # [x] Optional if released is false
