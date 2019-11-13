@@ -30,7 +30,7 @@ class SongsController < ApplicationController
   def update
     respond_to do |format|
       if @song.update(song_params)
-        format.html { redirect_to @song, notice: 'Song was successfully updated.' }
+        format.html { redirect_to songs_path, notice: 'Song was successfully updated.' }
       else
         format.html { render :edit }
       end
